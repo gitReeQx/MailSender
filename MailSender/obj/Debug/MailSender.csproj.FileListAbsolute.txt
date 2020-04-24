@@ -1,0 +1,17 @@
+D:\git\MailSender\MailSender\bin\Debug\MailSender.exe.config
+D:\git\MailSender\MailSender\bin\Debug\MailSender.exe
+D:\git\MailSender\MailSender\bin\Debug\MailSender.pdb
+D:\git\MailSender\MailSender\obj\Debug\MailSender.csprojAssemblyReference.cache
+D:\git\MailSender\MailSender\obj\Debug\MainWindow.g.cs
+D:\git\MailSender\MailSender\obj\Debug\App.g.cs
+D:\git\MailSender\MailSender\obj\Debug\MailSender_MarkupCompile.cache
+D:\git\MailSender\MailSender\obj\Debug\MailSender_MarkupCompile.lref
+D:\git\MailSender\MailSender\obj\Debug\MainWindow.baml
+D:\git\MailSender\MailSender\obj\Debug\MailSender.g.resources
+D:\git\MailSender\MailSender\obj\Debug\MailSender.Properties.Resources.resources
+D:\git\MailSender\MailSender\obj\Debug\MailSender.csproj.GenerateResource.cache
+D:\git\MailSender\MailSender\obj\Debug\MailSender.csproj.CoreCompileInputs.cache
+D:\git\MailSender\MailSender\obj\Debug\MailSender.exe
+D:\git\MailSender\MailSender\obj\Debug\MailSender.pdb
+D:\git\MailSender\MailSender\obj\Debug\Theme.baml
+D:\git\MailSender\MailSender\obj\Debug\App.baml
