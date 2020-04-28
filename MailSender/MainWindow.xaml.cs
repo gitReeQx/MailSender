@@ -24,5 +24,11 @@ namespace MailSender
         {
             InitializeComponent();
         }
+
+        void Send()
+        {
+            EmailSendServiceClass email = new EmailSendServiceClass(new List<string> { "example@gmail.com" }, "pass", MailBody.Text, MailTitle.Text);
+            email.SendMail();
+        }
     }
 }

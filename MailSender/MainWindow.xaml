@@ -5,14 +5,78 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MailSender"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Рассыльщик" Height="450" Width="800">
     <DockPanel >
-        <Menu Height="25" VerticalAlignment="Top" DockPanel.Dock="Top"/>
+        <Menu Height="25" VerticalAlignment="Top" DockPanel.Dock="Top">
+            <MenuItem Header="Файл" Height="25" Margin="0" VerticalAlignment="Top" Width="100"/>
+            <MenuItem Header="Помощь" Height="25" Margin="0" VerticalAlignment="Top" Width="100"/>
+        </Menu>
         <TabControl DockPanel.Dock="Top">
-            <TabItem Header="TabItem">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="Формирование группы рассылки">
+                <DockPanel LastChildFill="False">
+                    <StackPanel DockPanel.Dock="Top" Height="25" Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal">
+                            <ComboBox Text="Выбрать отправителя"  Height="25" IsEditable="True" IsReadOnly="True" Width="330"/>
+                            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                <Image Source="Image/add.png" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Button>
+                            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                <Image Source="Image/edit.png" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Button>
+                            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                <Image Source="Image/del.png" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Button>
+                        </StackPanel>
+                        <Rectangle VerticalAlignment="Stretch" Width="1" Margin="10,2,0,2" Stroke="Black" />
+                        <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label Content="Перейти в планировщик" Cursor=""/>
+                            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                <Image Source="Image/timer.png" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel DockPanel.Dock="Top" Height="25" Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal">
+                            <ComboBox Text="Выбрать smtp-server"  Height="25" IsEditable="True" IsReadOnly="True" Width="330"/>
+                            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                <Image Source="Image/add.png" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Button>
+                            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                <Image Source="Image/edit.png" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Button>
+                            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                <Image Source="Image/del.png" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Button>
+                        </StackPanel>
+                        <Rectangle VerticalAlignment="Stretch" Width="1" Margin="10,2,2,2" Stroke="Black" />
+                        <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label   Height="25" Content="Список адресатов" VerticalAlignment="Bottom"/>
+                            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                <Image Source="Image/add.png" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Button>
+                            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                <Image Source="Image/edit.png" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Button>
+                            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                <Image Source="Image/del.png" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                    <DataGrid DockPanel.Dock="Top" Height="316"/>
+                </DockPanel>
             </TabItem>
-            <TabItem Header="TabItem">
+            <TabItem Header="Планировщик">
+
+            </TabItem>
+            <TabItem Header="Редактор писем">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="MailTitle" HorizontalAlignment="Left" Height="23" Margin="283,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="MailBody" HorizontalAlignment="Left" Height="75" Margin="283,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Заголовок" HorizontalAlignment="Left" Margin="283,44,0,0" VerticalAlignment="Top" Width="67"/>
+                    <Label Content="Текст" HorizontalAlignment="Left" Margin="283,100,0,0" VerticalAlignment="Top" Width="67"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Статистика">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
